@@ -1,0 +1,10 @@
+{
+	"name": "team-spotlights",
+	"version": "0.1.0",
+	"description": "Team spotlights",
+	"main": "lib/index.js",
+	"keywords": [
+		"react",
+		"spotlights"
+	]
+}
