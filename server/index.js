@@ -12,12 +12,12 @@ app.set('port', process.env.PORT || 8080);
 const compiler = webpack(webpackDevConfig);
 app.use(webpackDevMiddleware(compiler, {
 	publicPath: webpackDevConfig.output.publicPath,
-	quiet: true,
 	filename: webpackDevConfig.output.filename
 }));
 
 app.use(webpackHotMiddleware(compiler));
 app.use('/', routes);
+app.use('/public/assets', express.static(path.join(__dirname, '../public/assets')));
 
 app.listen(app.get('port'), () => {
     console.log('Server is running on port ' + app.get('port'));
