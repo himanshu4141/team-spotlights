@@ -12,7 +12,7 @@ import './index.scss';
 injectTapEventPlugin();
 
 const App = () => (
-    <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+    <MuiThemeProvider>
         <TeamSpotlights />
     </MuiThemeProvider>
 );
