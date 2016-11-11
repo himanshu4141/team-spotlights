@@ -1,0 +1,27 @@
+.team-spotlights {
+
+	.main-title {
+		background-color: #000 !important;
+
+		button {
+			display: none !important;
+		}
+	}
+
+	h1 {
+		font-weight: 100 !important;
+		font-family: 'Roboto', sans-serif !important;
+	}
+
+	.grid-title {
+		font-size: 56px !important;
+		font-weight: 100 !important;
+		margin: 50px 0 !important;
+		text-align: center !important;
+		width: 100% !important;
+	}
+
+	.icon-ios-flame:before {
+		color: #d00a0a !important;
+	}
+}
