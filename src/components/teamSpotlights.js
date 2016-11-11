@@ -19,54 +19,59 @@ const styles = {
   },
   gridList: {
     width: 850
-  },
+  }
 };
 
 const tilesData = [
     {
         img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAfHAAAAJGUwYWVmOTI5LWQyZGItNGY4OC05MmFmLWM1YzdmNDRjOGNjYw.jpg',
         title: 'Michele Anjos',
-        author: 'pashminu',
+        author: 'Lorem ipsum dolor sit amet'
     },
     {
         img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/015/1ab/30ac588.jpg',
         title: 'Lei Zhu',
-        author: 'jill111',
+        author: 'Lorem ipsum dolor sit amet'
     },
     {
         img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/034/10c/340ebe1.jpg',
         title: 'Norman Chou',
-        author: 'Danson67',
+        author: 'Lorem ipsum dolor sit amet'
     },
     {
         img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/046/30d/262f479.jpg',
         title: 'Himanshu Yadav',
-        author: 'fancycrave1',
+        author: 'Lorem ipsum dolor sit amet'
     },
     {
         img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/005/09f/133/032a32d.jpg',
         title: 'Augustin Calderon',
-        author: 'Hans',
+        author: 'Lorem ipsum dolor sit amet'
     },
     {
         img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAIaAAAAJDY5MTY2NjM1LWYwNjYtNGVjZS05ZDg4LWRiYmU1MzAzNjgzYw.jpg',
         title: 'Cindy Ng',
-        author: 'fancycravel',
+        author: 'Lorem ipsum dolor sit amet'
     },
     {
         img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAORAAAAJDVhYTY3YzFmLTE4ZWItNGEzNC1hMjVjLWU5M2RlNGNmYWJjOQ.jpg',
         title: 'Vyacheslav Alayev',
-        author: 'jill111',
+        author: 'Lorem ipsum dolor sit amet'
     },
     {
         img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/0a0/2b4/0a7813d.jpg',
         title: 'Grace Yang',
-        author: 'BkrmadtyaKarki',
+        author: 'Lorem ipsum dolor sit amet'
     },
     {
-        img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/015/1ab/30ac588.jpg',
-        title: 'Lei Zhu',
-        author: 'jill111',
+        img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/000/0a2/389/1dea92f.jpg',
+        title: 'Bronislava Goldenberg',
+        author: 'Lorem ipsum dolor sit amet'
+    },
+    {
+        img: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAANAAAAAJDYzMTYxZjQyLTIwMjUtNDNkZS1iMTVlLWNlZGNmMjIxM2I0MA.jpg',
+        title: 'Rahul Lodha',
+        author: 'Lorem ipsum dolor sit amet'
     }
 ];
 
@@ -100,7 +105,7 @@ class TeamSpotlights extends Component {
                 <div className="grid-title">We are Incredibles <i className="icon ion-ios-flame"></i></div>
                 <GridList
                     padding={10}
-                    cellHeight={505}
+                    cellHeight={409}
                     cols={3}
                     style={styles.gridList}
                 >
@@ -110,13 +115,16 @@ class TeamSpotlights extends Component {
                                 <img src={tile.img} />
                             </CardMedia>
                             <CardTitle title={tile.title} subtitle={tile.author} />
-                            <CardText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                            </CardText>
                             <CardActions>
-                              <FlatButton label="Action1" />
-                              <FlatButton label="Action2" />
+                                <FlatButton
+                                    className="button-icon-social"
+                                    icon={<i className="icon icon-social ion-social-linkedin-outline"></i>} />
+                                <FlatButton
+                                    className="button-icon-social"
+                                    icon={<i className="icon icon-social ion-social-github-outline"></i>} />
+                                <FlatButton
+                                    className="button-icon-social"
+                                    icon={<i className="icon icon-social ion-ios-arrow-down"></i>} />
                             </CardActions>
                         </Card>
                     ))}
