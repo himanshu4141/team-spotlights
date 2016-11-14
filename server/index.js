@@ -16,8 +16,8 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 
 app.use(webpackHotMiddleware(compiler));
+// app.use('/public/assets', express.static(path.join(__dirname, '../public/assets')));
 app.use('/', routes);
-app.use('/public/assets', express.static(path.join(__dirname, '../public/assets')));
 
 app.listen(app.get('port'), () => {
     console.log('Server is running on port ' + app.get('port'));

@@ -8,11 +8,14 @@ const nodeModulesPath = path.join(__dirname, './../node_modules');
 
 module.exports = {
     devtool: 'cheap-module-source-map',
-    entry: entryPath,
+    entry: [
+        'webpack-hot-middleware/client',
+        entryPath
+    ],
     output: {
         path: publicPath,
-        publicPath: publicPath,
-        filename: 'bundle.js',
+        publicPath: '/',
+        filename: 'public/assets/bundle.js',
     },
     module: {
         loaders: [{
@@ -32,5 +35,13 @@ module.exports = {
     },
     postcss: [
         autoprefixer({ browsers: ['> 5%', 'IE 10-11'] })
+    ],
+    plugins: [
+        // Webpack 1.0
+        new webpack.optimize.OccurenceOrderPlugin(),
+        // Webpack 2.0 fixed this mispelling
+        // new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
     ]
 };
