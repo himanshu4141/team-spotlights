@@ -24,4 +24,22 @@
 	.icon-ios-flame:before {
 		color: #d00a0a !important;
 	}
+
+	.icon-social {
+		font-size: 32px !important;
+	}
+
+	.button-icon-social {
+		min-width:26% !important;
+
+		&:first-child {
+			text-align: left !important;
+		    margin-left: 10px !important;
+		}
+
+		&:last-child {
+			text-align: right !important;
+		    margin-right: 10px !important;
+		}
+	}
 }
